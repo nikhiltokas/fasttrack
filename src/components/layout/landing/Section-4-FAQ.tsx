@@ -11,23 +11,33 @@ type FAQ = {
 const faqs: FAQ[] = [
   {
     id: 1,
-    question: "Do you handle international shipments?",
-    answer: "Yes, we offer international shipping to a wide range of countries. Please check our shipping policy or contact customer support for specific destination availability.",
+    question: "What areas do you serve for mobile truck repair?",
+    answer: "We proudly serve Indianapolis and the surrounding areas. Our mobile units are dispatched quickly to your location, wherever you are in the region.",
   },
   {
     id: 2,
-    question: "What types of shipping services do you offer?",
-    answer: "We provide several shipping options including standard, expedited, and express services. The available options may vary depending on your location and the items ordered.",
+    question: "What types of trucks do you repair?",
+    answer: "We service a wide range of trucks, including semi-trucks, box trucks, dump trucks, flatbeds, refrigerated trucks, and more. If it's a heavy-duty vehicle, we can likely fix it!",
   },
   {
     id: 3,
-    question: "Can I track my shipment?",
-    answer: "Absolutely. Once your order is shipped, you will receive a tracking number via email. You can use this to monitor your shipment's progress in real time.",
+    question: "Do you offer 24/7 emergency roadside assistance?",
+    answer: "Yes, we provide 24/7 emergency mobile truck repair services. Just give us a call, and our rapid response team will be on their way to assist you.",
   },
   {
     id: 4,
-    question: "How long does delivery take?",
-    answer: "Delivery times vary depending on the shipping method and destination. Typically, international orders arrive within 5 to 15 business days. Express options may offer faster delivery.",
+    question: "How quickly can a technician arrive?",
+    answer: "For emergency requests in Indianapolis, we aim to have a technician dispatched and en route within 15-30 minutes, depending on your exact location and current demand.",
+  },
+  {
+    id: 5,
+    question: "Can you perform preventative maintenance on-site?",
+    answer: "Absolutely. We offer scheduled on-site preventative maintenance services to keep your fleet in optimal condition, minimizing unexpected breakdowns and maximizing uptime.",
+  },
+  {
+    id: 6,
+    question: "What payment methods do you accept?",
+    answer: "We accept all major credit cards, debit cards, and electronic payments. For fleet accounts, we can also set up direct billing options. Please contact us for more details.",
   },
 ];
 
@@ -44,7 +54,7 @@ export default function SectionFAQ() {
         {/* Title */}
         <div className="text-center">
           <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white">
-            FAQ&apos;s
+            Indianapolis Mobile Repair FAQs
           </span>
           <h2 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-light text-black mb-6 leading-12 md:leading-16">
             Questions?

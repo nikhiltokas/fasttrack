@@ -12,23 +12,23 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    text: "We needed a partner who understood the complexity of large-scale infrastructure projects. Not only did they meet our container requirements, but they also adapted to changes in timelines and ensured smooth coordination across multiple locations. It’s rare to find a company that combines this level of quality with such dependable service.",
-    name: "Michael Turner",
-    role: "Operations Manager, GlobalTrade Logistics",
+    text: "My truck broke down on I-70 near Indianapolis, and these guys were there in under an hour. Professional, quick, and got me back on the road without a hitch. Highly recommend their mobile repair service!",
+    name: "David Chen",
+    role: "Independent Truck Driver",
     avatar:
       "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
-    text: "International shipping can be stressful, but they've made it incredibly straightforward for us. From port clearances to on-site delivery, their containers have always arrived in excellent condition and right on schedule. Their expertise and proactive support have saved us time and costs while building long‑term trust.",
-    name: "Ravi Patel",
-    role: "Logistics Coordinator, BrightPath Exports",
+    text: "We rely on our trucks daily, and when one had an electrical issue, their mobile technician came right to our yard in Indianapolis. Fixed it on the spot, saving us a tow and valuable time. Excellent service!",
+    name: "Sarah Johnson",
+    role: "Fleet Manager, Indy Logistics Co.",
     avatar:
       "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
-    text: "As a European procurement team handling multiple projects at once, we needed a supplier who could keep up with demand while maintaining quality. They've gone above and beyond every time — offering durable containers, flexible options, and consistent delivery. It’s rare to find a partner this dependable, and they’ve become essential to our operations.",
-    name: "Laura Müller",
-    role: "Head of Procurement, EuroBuild Systems",
+    text: "Flat tire on a Sunday morning in downtown Indy. Called them up, and they dispatched a mobile unit immediately. The technician was friendly, efficient, and had me rolling again in no time. Fantastic service!",
+    name: "Mark Thompson",
+    role: "Owner-Operator",
     avatar:
       "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
@@ -73,17 +73,16 @@ export default function Testimonials() {
         {/* Left intro */}
         <section>
           <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white">
-            Customer testimonials
+            What Our Indianapolis Clients Say
           </span>
 
           <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-light text-black mb-6 leading-12 md:leading-16">
-            What Our Clients Say
+            Trusted by Truckers in Indy
           </h1>
 
           <p className="mt-3 max-w-xl text-sm leading-6 text-gray-600">
-            Discover real stories and feedback from businesses across the globe
-            who rely on our container solutions for their projects, shipments,
-            and long-term success.
+          Hear directly from the Indianapolis truck drivers and businesses
+          who rely on our fast, reliable, and on-site mobile repair services.
           </p>
 
           <div className="mt-6">

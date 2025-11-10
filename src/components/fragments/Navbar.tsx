@@ -80,13 +80,14 @@ export default function Navbar() {
               scrolled ? "text-gray-900" : "text-white"
             )}
           >
-            Fast Track
+            Torque Go
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-0.5">
-            <Link
-              href="/"
+          <div className="flex items-center gap-5">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-0.5">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-lg transition-colors",
                 scrolled
@@ -95,8 +96,7 @@ export default function Navbar() {
               )}
             >
               Home
-            </Link>
-
+            </button>
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -119,96 +119,47 @@ export default function Navbar() {
               {servicesOpen && (
                 <div className="absolute top-full mt-2 left-0 bg-white rounded-xl shadow-2xl py-2 min-w-[200px] animate-in fade-in slide-in-from-top-2 duration-200">
                   <Link
-                    href="/air-cargo"
+                    href="/emergency-roadside-repair"
                     className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                   >
-                    Air cargo
+                    Emergency Roadside Repair
                   </Link>
                   <Link
-                    href="/ocean-cargo"
+                    href="/tire-repair-replacement"
                     className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                   >
-                    Ocean cargo
+                    Tire Repair & Replacement
                   </Link>
                   <Link
-                    href="/container-cargo"
+                    href="/brake-services"
                     className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                   >
-                    Container cargo
+                    Brake Services
                   </Link>
                   <Link
-                    href="/rail-transport"
+                    href="/engine-diagnostics-repair"
                     className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                   >
-                    Rail transport
+                    Engine Diagnostics & Repair
                   </Link>
                   <Link
-                    href="/last-mile-delivery"
+                    href="/preventative-maintenance"
                     className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                   >
-                    Last mile delivery
+                    Preventative Maintenance
+                  </Link>
+                   <Link
+                    href="/jump-starts-battery-services"
+                    className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
+                    Jump Starts & Battery Services
                   </Link>
                 </div>
               )}
             </div>
 
-            {/* Resources Dropdown */}
-            <div className="relative">
-              <button
-                onClick={(e) => handleDropdownClick(e, "resources")}
-                className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-1.5",
-                  scrolled
-                    ? "text-gray-700 hover:bg-gray-100"
-                    : "text-white hover:bg-white/10"
-                )}
-              >
-                Resources
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    resourcesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {resourcesOpen && (
-                <div className="absolute top-full mt-2 left-0 bg-white rounded-xl shadow-2xl py-2 min-w-[200px] animate-in fade-in slide-in-from-top-2 duration-200">
-                  <Link
-                    href="/login"
-                    className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    href="/signup"
-                    className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Sign Up
-                  </Link>
-                  <Link
-                    href="/schedules"
-                    className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Schedules
-                  </Link>
-                  <Link
-                    href="/tracking"
-                    className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Tracking
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="/about"
+            <button
+              onClick={() => document.getElementById('featured-services')?.scrollIntoView({ behavior: 'smooth' })}
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-lg transition-colors",
                 scrolled
@@ -217,10 +168,9 @@ export default function Navbar() {
               )}
             >
               About
-            </Link>
-
-            <Link
-              href="/career"
+            </button>
+            <button
+              onClick={() => document.getElementById('truck-repair-form')?.scrollIntoView({ behavior: 'smooth' })}
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-lg transition-colors",
                 scrolled
@@ -228,14 +178,14 @@ export default function Navbar() {
                   : "text-white hover:bg-white/10"
               )}
             >
-              Career
-            </Link>
+              Contact
+            </button>
           </div>
 
           {/* Right Side - Button & Menu Toggle */}
           <div className="flex items-center gap-3">
             {/* Get Started Button */}
-            <AnimatedButton href="/signup" variant="primary">
+            <AnimatedButton href="tel:4632832466" variant="primary">
               Call Us (463) 283-2466
             </AnimatedButton>
 
@@ -255,6 +205,7 @@ export default function Navbar() {
               )}
             </button>
           </div>
+          </div>
         </div>
       </nav>
 
@@ -265,28 +216,28 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(false)}
         >
           <div
-            className="absolute top-20 left-6 right-6 bg-white rounded-2xl shadow-2xl p-6 animate-in slide-in-from-top duration-300"
+            className="absolute top-20 left-4 right-4 bg-white rounded-2xl shadow-2xl p-4 animate-in slide-in-from-top duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex flex-col gap-2">
-              <Link
-                href="/"
-                className="px-4 py-2.5 text-gray-900 text-sm font-medium hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="px-4 py-2.5 text-gray-900 text-sm font-medium hover:bg-gray-50 rounded-lg transition-colors"
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  document.getElementById('featured-services')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="w-full text-left px-4 py-2.5 text-gray-900 text-sm font-medium hover:bg-gray-200 rounded-lg transition-colors"
               >
                 About
-              </Link>
-              <Link
-                href="/career"
-                className="px-4 py-2.5 text-gray-900 text-sm font-medium hover:bg-gray-50 rounded-lg transition-colors"
+              </button>
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  document.getElementById('truck-repair-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="w-full text-left px-4 py-2.5 text-gray-900 text-sm font-medium hover:bg-gray-200 rounded-lg transition-colors"
               >
-                Career
-              </Link>
+                Contact
+              </button>
 
               <div className="border-t border-gray-200 my-2" />
 
@@ -294,47 +245,43 @@ export default function Navbar() {
                 Services
               </div>
               <Link
-                href="/air-cargo"
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                href="/emergency-roadside-repair"
+                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
               >
-                Air cargo
+                Emergency Roadside Repair
               </Link>
               <Link
-                href="/ocean-cargo"
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                href="/tire-repair-replacement"
+                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
               >
-                Ocean cargo
+                Tire Repair & Replacement
               </Link>
               <Link
-                href="/container-cargo"
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                href="/brake-services"
+                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
               >
-                Container cargo
+                Brake Services
+              </Link>
+              <Link
+                href="/engine-diagnostics-repair"
+                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+              >
+                Engine Diagnostics & Repair
+              </Link>
+              <Link
+                href="/preventative-maintenance"
+                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+              >
+                Preventative Maintenance
+              </Link>
+              <Link
+                href="/jump-starts-battery-services"
+                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+              >
+                Jump Starts & Battery Services
               </Link>
 
               <div className="border-t border-gray-200 my-2" />
-
-              <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">
-                Resources
-              </div>
-              <Link
-                href="/login"
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/signup"
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                Sign Up
-              </Link>
-              <Link
-                href="/contact"
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                Contact
-              </Link>
             </div>
           </div>
         </div>

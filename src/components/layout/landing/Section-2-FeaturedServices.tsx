@@ -12,37 +12,37 @@ type Feature = {
 
 const features: Feature[] = [
   {
-    src: "https://images.pexels.com/photos/1592386/pexels-photo-1592386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    title: "Vehicle Repair Services",
-    text: "Expert vehicle repair services to keep your fleet running smoothly and efficiently. Our certified technicians handle all types of repairs, from routine maintenance to complex engine overhauls.",
+    src: "/images/Truck Image 1.webp",
+    title: "On-Site Diagnostics & Repair",
+    text: "Our mobile units come to you, equipped with advanced diagnostic tools to quickly identify and fix issues on the spot, minimizing your downtime in Indianapolis.",
     emphasis: true,
   },
   {
     src: "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    title: "Truck Maintenance & Servicing",
-    text: "Comprehensive truck maintenance and servicing to ensure optimal performance and longevity. We offer preventative maintenance, diagnostics, and repairs for all heavy-duty vehicles.",
+    title: "Emergency Roadside Assistance",
+    text: "24/7 rapid response for breakdowns anywhere in Indianapolis. We get your truck back on the road fast, from tire changes to engine issues.",
     emphasis: true,
   },
   {
-    src: "https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    title: "Roadside Assistance",
-    text: "24/7 roadside assistance for unexpected breakdowns. Our rapid response team will get your trucks back on the road quickly, minimizing downtime and ensuring timely deliveries.",
+    src: "/images/Truck Image 3.jpg",
+    title: "Preventative Maintenance",
+    text: "Scheduled on-site maintenance services to keep your trucks running efficiently and prevent costly breakdowns, tailored for Indianapolis businesses.",
     emphasis: true,
   },
 ];
 
-export default function FeaturedServices() {
+export default function FeaturedServices({ id }: { id?: string }) {
   return (
-    <section className="rounded-2xl bg-black">
+    <section id={id} className="rounded-2xl bg-black">
       <div className="mx-auto w-full max-w-7xl pt-12 pb-4 lg:pb-12">
         {/* Title */}
         <div className="text-center">
           <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white">
-            Why Choose Us
+            Our Mobile Repair Advantage
           </span>
           <h2 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-12 md:leading-16 lg:leading-20">
-            All set for seamless
-            <br className="hidden sm:block" /> transportation
+            Keeping Indianapolis Trucks
+            <br className="hidden sm:block" /> Moving, On-Site
           </h2>
         </div>
 

@@ -15,31 +15,25 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Company",
     links: [
-      { name: "About us", href: "/about" },
-      { name: "Contact", href: "/contact" },
-      { name: "Career", href: "/career" },
+      { name: "About Us", href: "/about" },
+      { name: "Contact Us", href: "/contact" },
     ],
   },
   {
     title: "Services",
     links: [
-      { name: "Worldwide shipping", href: "#" },
-      { name: "Sea shipping", href: "#" },
-      { name: "Ground shipping", href: "#" },
-    ],
-  },
-  {
-    title: "Shipping",
-    links: [
-      { name: "Track Packages", href: "#" },
-      { name: "Calculate Fare", href: "#" },
+      { name: "Mobile Diagnostics", href: "#" },
+      { name: "Emergency Roadside", href: "#" },
+      { name: "Preventative Maintenance", href: "#" },
+      { name: "Brake Repair", href: "#" },
+      { name: "Tire Service", href: "#" },
     ],
   },
   {
     title: "Support",
     links: [
-      { name: "Customer care", href: "#" },
-      { name: "Insurance Claim", href: "#" },
+      { name: "FAQs", href: "#" },
+      { name: "Service Request", href: "#" },
     ],
   },
 ];
@@ -64,8 +58,8 @@ export default function Footer() {
   const gridColsClass = `grid-cols-2 sm:grid-cols-4 lg:grid-cols-${activeFooterColumns.length}`;
 
   return (
-    <footer className="px-4">
-      <div className="mx-auto w-full max-w-7xl">
+    <footer className="px-4 border border-t-2">
+      <div className="mx-auto w-full max-w-7xl p-6">
         {/* Top link columns */}
         <div className="border-b border-gray-200 pb-12">
           <div className={cn("grid gap-8", gridColsClass)}>
@@ -104,12 +98,12 @@ export default function Footer() {
         <div className="flex flex-col items-start justify-between gap-6 py-8 md:flex-row md:items-center">
           <div className="flex flex-col">
             <h1 className="inline-flex items-center font-bold text-2xl">
-              Fast Track Indianapolis
+              Torque Go Mobile Truck Repair
             </h1>
             <p className="mt-3 text-sm text-gray-600">
               Copyright ©{" "}
               <Link href="/" className="hover:text-accent">
-                Fast Track
+                Torque Go Mobile Truck Repair
               </Link>{" "}
               2025 | All Rights Reserved
             </p>
@@ -119,8 +113,8 @@ export default function Footer() {
             <div className="text-base font-semibold text-gray-900">
               Emergency Service Available
             </div>
-            <AnimatedButton href="/contact" variant="primary">
-              Call (463) 283-2466
+            <AnimatedButton href="tel:4632832466" variant="primary">
+              Call Now (463) 283-2466
             </AnimatedButton>
           </div>
         </div>
@@ -142,10 +136,10 @@ export default function Footer() {
 
             <div className="text-sm text-gray-600">
               <a
-                href="mailto:contact@fasttrack.com"
+                href="mailto:info@torquego.com"
                 className="hover:text-accent"
               >
-                contact@fasttrack.com
+                info@torquego.com
               </a>
             </div>
 

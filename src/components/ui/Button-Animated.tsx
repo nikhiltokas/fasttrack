@@ -11,8 +11,8 @@ const iconMap: Record<IconType, LucideIcon> = {
   "download": Download,
 };
 
-interface AnimatedButtonProps {
-  href: string;
+interface AnimatedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  href?: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "tertiary";
   icon?: IconType;
@@ -22,7 +22,8 @@ export default function AnimatedButton({
   href, 
   children, 
   variant = "primary",
-  icon 
+  icon,
+  ...props
 }: AnimatedButtonProps) {
   const IconComponent = icon ? iconMap[icon] : null;
 
@@ -43,13 +44,10 @@ export default function AnimatedButton({
       variantStyles = "bg-accent hover:bg-accent text-white"; // Default to primary
   }
   
-  return (
-    <a 
-      href={href} 
-      className={`${baseStyles} ${variantStyles}`}
-    >
+  const content = (
+    <>
       {/* Text with slide animation */}
-      <span className="relative overflow-hidden inline-flex h-5 items-center">
+      <span className="relative overflow-hidden inline-flex h-5 items-center whitespace-nowrap">
         <span className="block transition-transform duration-300 group-hover:-translate-y-full">
           {children}
         </span>
@@ -74,6 +72,26 @@ export default function AnimatedButton({
           )}
         </span>
       )}
-    </a>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a 
+        href={href} 
+        className={`${baseStyles} ${variantStyles}`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button 
+      {...props}
+      className={`${baseStyles} ${variantStyles}`}
+    >
+      {content}
+    </button>
   );
 }

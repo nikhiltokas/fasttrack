@@ -18,15 +18,15 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto pb-12 sm:pb-16">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-12 md:leading-16 lg:leading-20">
-              Reliable truck repair.
+              Mobile Truck Repair in Indianapolis.
               <br />
-              <span>Fast, affordable</span>
+              <span>Fast, reliable,</span>
               <br />
-              and trusted.
+              and always on-site.
             </h1>
 
             <AnimatedButton
-              href="#"
+              href="tel:4632832466"
               variant="primary"
               icon="arrow-diagonal"
             >

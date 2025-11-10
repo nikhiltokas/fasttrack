@@ -8,7 +8,7 @@ import SectionFAQ from "@/components/layout/landing/Section-4-FAQ";
 import Footer from "@/components/fragments/Footer";
 import { LogoMarquee } from "@/components/layout/landing/Section-5-LogoMarquee";
 import SectionCTA from "@/components/layout/landing/Section-6-CTA";
-
+import TruckRepairForm from "@/components/layout/landing/Section-7-Form";
 
 const HomePage = () => {
   return (
@@ -17,9 +17,11 @@ const HomePage = () => {
       <Hero />
       <LogoMarquee />
       <Section1 />
-      <FeaturedServices />
+      <FeaturedServices id="featured-services" />
       <Testimonials />
       <SectionFAQ />
+      <TruckRepairForm id="truck-repair-form" />
+      <LogoMarquee />
       <SectionCTA />
       <Footer />
     </Wrapper>
